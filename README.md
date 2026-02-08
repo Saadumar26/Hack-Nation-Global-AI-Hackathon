@@ -1,4 +1,4 @@
-# Agentic Commerce - Python Edition 🛒
+# Agentic Commerce 🛒
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-2.3+-green?logo=flask)
