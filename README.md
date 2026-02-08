@@ -1,657 +1,843 @@
-# Agentic Commerce - Python Edition 🛒
+# Agentic Commerce 🛒
 
-**Hack-Nation Global AI Hackathon Submission**
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-2.3+-green?logo=flask)
+![Google AI](https://img.shields.io/badge/Google_AI-Gemini-orange?logo=google)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Hackathon](https://img.shields.io/badge/Hackathon-Hack--Nation_Global-red)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
-An end-to-end AI-powered shopping agent built with **Python + Flask** that automates the process of finding and buying products across multiple retailers.
+**Hack-Nation Global AI Hackathon Submission | VC Track**
 
-## 🎉 NEW: FREE Gemini AI Integration!
+---
 
-**100% FREE to run** - Uses Google's Gemini API (no credit card required!)
-- ✅ Natural language parsing with AI
-- ✅ Smart fallback to regex
-- ✅ Zero API costs
-- ✅ Works offline too!
+## 📋 Table of Contents
 
-## 🎯 Challenge Requirements Met
+- [Overview](#overview)
+- [Challenge Requirements](#challenge-requirements)
+- [Tech Stack](#tech-stack)
+- [Installation & Setup](#installation--setup)
+- [How It Works](#how-it-works)
+- [Hybrid Intelligence Design](#hybrid-intelligence-design)
+- [Ranking Algorithm](#ranking-algorithm)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Key Features](#key-features)
+- [Future Enhancements](#future-enhancements)
+- [Team Information](#team-information)
+- [License](#license)
 
-✅ **Conversational Brief & Constraints Capture**
-- Natural language input for shopping requirements (AI-powered!)
-- Structured JSON output with budget, delivery, preferences
+---
+
+## 🎯 Overview
+
+**Agentic Commerce** is an end-to-end AI-powered shopping agent built with **Python + Flask** that automates the process of finding and purchasing products across multiple retailers.
+
+### Core Capabilities
+
+This AI agent automatically:
+
+- Understands shopping intent from natural language
+- Discovers products across multiple retailers
+- Ranks options using transparent, explainable logic
+- Combines items into a single cart
+- Orchestrates a unified checkout flow
+
+### Design Philosophy
+
+The system is designed to be **reliable, explainable, and production-oriented**, combining AI flexibility with deterministic backend logic.
+
+---
+
+## ✅ Challenge Requirements
+
+### 1. Conversational Brief & Constraints Capture
+
+**Implemented Features:**
+- Natural language input for shopping requirements
+- Structured JSON output generation
+  - Budget constraints
+  - Delivery preferences
+  - Size requirements
+  - User preferences
 - Quick-start scenarios for common use cases
-- **Dual parsing modes: Gemini AI + Regex fallback**
+- Dual parsing pipeline:
+  - AI-assisted understanding
+  - Deterministic fallback mechanism
 
-✅ **Multi-Retailer Discovery (4 retailers)**
-- Amazon, REI, Backcountry, Evo integration
-- Realistic product data with prices, ratings, delivery times
-- Multiple product categories (jacket, pants, gloves, goggles, helmet)
+### 2. Multi-Retailer Discovery
 
-✅ **Transparent Ranking Engine (Python Algorithm)**
-- Score-based ranking (NOT just LLM output)
-- Weighted scoring: Price (40%), Delivery (30%), Quality (25%), Preferences (bonus)
-- Full explanation for each product's rank
-- **Implemented as Python class with clear logic**
-- **AI for parsing, Python for ranking = Best of both worlds**
+**Supported Retailers:**
+- Amazon
+- REI
+- Backcountry
+- Evo
 
-✅ **Single Combined Cart View**
-- Products from multiple retailers in one place
-- Total cost calculation
-- Budget tracking with percentage used
-- Delivery timeline for each item
-- Easy product swapping and optimization
+**Product Categories:**
+- Jackets
+- Pants
+- Gloves
+- Goggles
+- Helmets
 
-✅ **Checkout Orchestration (Simulated)**
-- Safe demo mode (no real purchases)
-- Single payment & shipping entry
-- Multi-retailer order processing simulation
-- Real-time status updates
+**Product Data Includes:**
+- Realistic pricing
+- Customer ratings
+- Delivery time estimates
+
+### 3. Transparent Ranking Engine
+
+**Python-Based Scoring System:**
+
+**Weighted Criteria:**
+- **Price Fit:** 40% weightage
+- **Delivery Speed:** 30% weightage
+- **Quality Rating:** 25% weightage
+- **Preference Match:** Bonus points
+
+**Key Features:**
+- Score-based ranking (not LLM-generated)
+- Full score breakdown per product
+- Explainable decision-making
+- No black-box AI decisions
+
+### 4. Unified Cart Experience
+
+**Features:**
+- Single cart for products from multiple retailers
+- Real-time budget usage tracking
+- Category-wise cost breakdown
+- Delivery timeline aggregation
+- Visual budget utilization display
+
+### 5. Checkout Orchestration
+
+**Simulated Checkout Flow:**
+- Unified checkout interface
+- Multi-retailer order simulation
+- Step-by-step status updates
+- Order confirmation tracking
+
+---
 
 ## 🏗️ Tech Stack
 
-### Backend
-- **Python 3.8+**
-- **Flask** - Web framework
-- **python-dotenv** - Environment variables
-- **google-generativeai** - FREE Gemini API (optional but recommended!)
+### Backend Technologies
 
-### Frontend
-- **Vanilla JavaScript** - No framework dependencies
-- **Custom CSS** - Modern, responsive design
-- **HTML5** - Semantic markup
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Python** | 3.8+ | Core backend language |
+| **Flask** | Latest | Web framework |
+| **python-dotenv** | Latest | Environment variable management |
+| **google-generativeai** | Latest | AI-assisted parsing |
 
-### AI Integration
-- **Gemini 2.0 Flash Lite** - Fastest free model for parsing
-- **Regex Fallback** - Works without API
-- **Dual Mode** - Best reliability
+### Frontend Technologies
+
+| Technology | Purpose |
+|------------|---------|
+| **Vanilla JavaScript** | Frontend interactivity |
+| **HTML5** | Structure |
+| **CSS3** | Styling |
+
+### Architecture Highlights
+
+- **AI-Assisted Intent Understanding:** Natural language processing for user input
+- **Deterministic Python Ranking:** Transparent scoring algorithm
+- **Graceful Fallback Mechanisms:** Robust error handling
+- **Modular Design:** Easy to extend and maintain
+
+---
 
 ## 📦 Installation & Setup
 
 ### Prerequisites
+
+You must have Python 3.8 or higher installed on your system:
+
 ```bash
-# Check Python version (need 3.8+)
 python --version
-# or
-python3 --version
 ```
 
-### Step 1: Clone or Extract Project
+### Step-by-Step Setup
+
+**1. Clone the Repository**
 
 ```bash
+git clone <repository-url>
 cd agentic-commerce-python
 ```
 
-### Step 2: Create Virtual Environment (Recommended)
+**2. Create Virtual Environment**
 
 ```bash
-# Create virtual environment
+# Linux/Mac
 python -m venv venv
-
-# Activate it
-# On Windows:
-venv\Scripts\activate
-
-# On Mac/Linux:
 source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
 ```
 
-### Step 3: Install Dependencies
+**3. Install Dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-This installs:
-- `flask` - Web server
-- `python-dotenv` - Environment variables
-- `google-generativeai` - FREE Gemini API
-- `requests` - HTTP library
+**4. Configure Environment Variables**
 
-### Step 4: Get FREE Gemini API Key (Optional but Recommended)
-
-1. Visit: https://aistudio.google.com/app/apikey
-2. Sign in with Google account
-3. Click "Create API Key"
-4. Copy your key (starts with `AIzaSy...`)
-
-**Cost: $0** - Completely free, no credit card needed!
-
-### Step 5: Configure API Key
+Create a `.env` file in the root directory:
 
 ```bash
-# Copy example env file
-cp .env.example .env
-
-# Edit .env and add your API key
-GEMINI_API_KEY=AIzaSy...your-actual-key...
-USE_AI_PARSING=true
+GEMINI_API_KEY=your_api_key_here
+FLASK_ENV=development
 ```
 
-**Skip this step?** No problem! The app works perfectly with regex-only mode.
-
-### Step 6: Test Your Setup (Optional)
-
-```bash
-python test_gemini_setup.py
-```
-
-This verifies:
-- ✅ API key is valid
-- ✅ Gemini connection works
-- ✅ Both parsing modes functional
-- ✅ Available models listed
-
-### Step 7: Run the Application
+**5. Run the Application**
 
 ```bash
 python app.py
 ```
 
-You should see:
-```
-🚀 Agentic Commerce Server Starting...
-📱 Visit: http://localhost:5000
-🛍️  Ready for AI-powered shopping!
-🤖 Gemini AI Parsing: ENABLED (Free!)
-```
+**6. Access the Application**
 
-Or without API:
+Open your browser and visit:
 ```
-🚀 Agentic Commerce Server Starting...
-📱 Visit: http://localhost:5000
-🛍️  Ready for AI-powered shopping!
-ℹ️  Using regex-based parsing (no API key needed)
+http://localhost:5000
 ```
 
-### Step 8: Open in Browser
+---
 
-Visit: `http://localhost:5000`
+## 🎮 How It Works
 
-## 🎮 How to Use
+### Step 1: Conversational Input
 
-### With Gemini AI (Natural Language):
+User apni needs natural language mein describe karta hai:
 
-1. **Type naturally** - No rigid format needed!
-   - "I need warm skiing gear, about 400 bucks, I'm a medium, deliver fast"
-   - "Looking for waterproof outfit for snow, $400 max, size large"
-   - "Skiing clothes needed ASAP, 400 dollars, medium size"
+**Example:**
+```
+"I need warm skiing gear, budget 400, medium size, deliver fast"
+```
 
-2. **AI Parses** your request
-   - Understands context and intent
-   - Extracts budget, size, preferences
-   - Detects urgency ("fast", "ASAP")
+### Step 2: Structured Specification
 
-### With Regex (Structured):
+The system automatically extracts:
 
-1. **Use clear format**
-   - "Skiing outfit, $400, size M, 5 days"
-   - "Budget $400, delivery 5 days, size M, skiing"
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Budget** | Maximum spending limit | $400 |
+| **Delivery** | Time constraints | Fast (2-3 days) |
+| **Size** | Product size | Medium |
+| **Preferences** | Special requirements | Warmth, waterproofing |
+| **Required Items** | Product categories | Jacket, pants, gloves |
 
-2. **Agent Parses** keywords
-   - Regex patterns extract data
-   - Fast and deterministic
+### Step 3: Product Discovery
 
-### Both Modes:
+**Discovery Process:**
+1. Query multiple retailers simultaneously
+2. Gather candidate products across categories
+3. Collect product metadata:
+   - Price information
+   - Availability status
+   - Rating and reviews
+   - Delivery estimates
 
-3. **Products Discovered** from multiple retailers
-   - Automatically ranked using Python algorithm
+### Step 4: Transparent Ranking
 
-4. **Review & Customize** your cart
-   - Click products to swap selections
-   - See budget breakdown
-   - View delivery timeline
+**Ranking Criteria:**
 
-5. **Proceed to Checkout**
-   - Watch simulated multi-retailer checkout
+Each product is scored using a **pure Python algorithm**:
+
+```python
+Total Score = (Price Score × 0.40) + 
+              (Delivery Score × 0.30) + 
+              (Rating Score × 0.25) + 
+              (Preference Bonus)
+```
+
+**Score Breakdown Example:**
+```
+Arc'teryx Rush Jacket — 91/100
+├─ Price fit: 21/25
+├─ Delivery: 30/30
+├─ Rating: 24/25
+└─ Preference match: 16/20
+```
+
+### Step 5: Unified Cart & Checkout
+
+**Cart Features:**
+- Best-ranked products automatically selected
+- Budget validation in real-time
+- Delivery timeline verification
+- Multi-retailer checkout simulation
+
+**Checkout Flow:**
+1. Review selected products
+2. Confirm budget allocation
+3. Process multi-retailer orders
+4. Track order status
+
+---
+
+## 🧮 Hybrid Intelligence Design
+
+### AI vs Deterministic Logic
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Parsing** | AI-Assisted | Natural language understanding |
+| **Fallback** | Deterministic | Robust constraint extraction |
+| **Ranking** | Pure Python | Transparent decision-making |
+| **Scoring** | Algorithmic | Explainable product evaluation |
+
+### Parsing Layer Architecture
+
+**AI-Assisted Parsing:**
+```python
+def parse_with_ai(user_input):
+    """
+    Uses Google Gemini to understand:
+    - Shopping intent
+    - Budget constraints
+    - Delivery preferences
+    - Product requirements
+    """
+    # Returns structured JSON
+```
+
+**Deterministic Fallback:**
+```python
+def fallback_parser(user_input):
+    """
+    Regex-based extraction for:
+    - Budget amounts ($XXX, XXX dollars)
+    - Size keywords (small, medium, large)
+    - Delivery terms (fast, urgent, quick)
+    - Product categories (jacket, pants, etc.)
+    """
+    # Returns structured specification
+```
+
+### Decision Layer Algorithm
+
+```python
+def rank_products(products, specification):
+    """
+    Deterministic scoring algorithm:
+    
+    1. Price Fit Score (40 points)
+       - Calculate price deviation from budget
+       - Penalize overpriced items
+       - Reward value options
+    
+    2. Delivery Feasibility (30 points)
+       - Check delivery timeframe
+       - Prioritize faster shipping
+       - Consider user urgency
+    
+    3. Product Quality (25 points)
+       - Normalize ratings (0-5 scale)
+       - Consider review count
+       - Factor in brand reputation
+    
+    4. Preference Alignment (bonus points)
+       - Match user requirements
+       - Technical specifications
+       - Feature matching
+    
+    Returns: Sorted list with score breakdown
+    """
+```
+
+### Key Design Principle
+
+> **"AI is used for understanding intent, not for making opaque decisions."**
+
+**Benefits:**
+- Full transparency in product ranking
+- Reproducible results
+- Easy to debug and improve
+- User trust through explainability
+
+---
+
+## 📊 Ranking Algorithm Details
+
+### Score Components
+
+#### 1. Price Fit Score (40 points max)
+
+```python
+def calculate_price_score(price, budget, max_score=40):
+    """
+    Perfect score for prices ≤ 80% of budget
+    Linear penalty above that
+    Zero score if > budget
+    """
+    if price > budget:
+        return 0
+    
+    ratio = price / budget
+    if ratio <= 0.8:
+        return max_score
+    else:
+        # Linear decrease from 0.8 to 1.0
+        return max_score * (1 - (ratio - 0.8) / 0.2)
+```
+
+**Example:**
+- Budget: $100
+- Product at $70 → 40/40 points (excellent value)
+- Product at $90 → 20/40 points (acceptable)
+- Product at $110 → 0/40 points (over budget)
+
+#### 2. Delivery Score (30 points max)
+
+```python
+def calculate_delivery_score(delivery_days, urgency, max_score=30):
+    """
+    Faster delivery = higher score
+    Scales based on user urgency
+    """
+    if urgency == "fast":
+        if delivery_days <= 2:
+            return max_score
+        elif delivery_days <= 5:
+            return max_score * 0.6
+        else:
+            return max_score * 0.3
+    
+    # Similar logic for normal/slow urgency
+```
+
+**Example:**
+- Urgency: Fast, Delivery: 2 days → 30/30 points
+- Urgency: Normal, Delivery: 5 days → 25/30 points
+- Urgency: Fast, Delivery: 7 days → 9/30 points
+
+#### 3. Rating Score (25 points max)
+
+```python
+def calculate_rating_score(rating, review_count, max_score=25):
+    """
+    Normalizes ratings to 0-25 scale
+    Considers review count for reliability
+    """
+    base_score = (rating / 5.0) * max_score
+    
+    # Confidence adjustment based on reviews
+    if review_count < 10:
+        confidence = 0.7
+    elif review_count < 50:
+        confidence = 0.85
+    else:
+        confidence = 1.0
+    
+    return base_score * confidence
+```
+
+**Example:**
+- 4.5★ with 200 reviews → 22.5/25 points
+- 4.8★ with 5 reviews → 16.8/25 points
+- 3.5★ with 100 reviews → 17.5/25 points
+
+#### 4. Preference Bonus (0-20 points)
+
+```python
+def calculate_preference_bonus(product, preferences, max_bonus=20):
+    """
+    Matches product features to user preferences
+    Each match adds points
+    """
+    bonus = 0
+    for pref in preferences:
+        if pref.lower() in product['description'].lower():
+            bonus += max_bonus / len(preferences)
+    
+    return min(bonus, max_bonus)
+```
+
+**Example:**
+- Preferences: ["warm", "waterproof"]
+- Product mentions both → 20/20 bonus
+- Product mentions one → 10/20 bonus
+- Product mentions neither → 0/20 bonus
+
+### Complete Ranking Example
+
+```
+Product: Arc'teryx Rush Jacket
+────────────────────────────────────
+Price: $380 (Budget: $400)
+Delivery: 2 days (Requirement: Fast)
+Rating: 4.8★ (250 reviews)
+Matches: Warm, Waterproof
+
+Score Breakdown:
+├─ Price Fit:    38/40  (95% of budget)
+├─ Delivery:     30/30  (Fast delivery)
+├─ Rating:       24/25  (Excellent reviews)
+└─ Preferences:  20/20  (All matches)
+────────────────────────────────────
+TOTAL SCORE:    112/115 = 97%
+RANK: #1
+```
+
+---
 
 ## 🗂️ Project Structure
 
 ```
 agentic-commerce-python/
-├── app.py                    # Main Flask application + Gemini integration
-├── requirements.txt          # Python dependencies
-├── .env.example             # Environment variables template
-├── test_gemini_setup.py     # Setup verification script
-├── SETUP_GEMINI.md          # Detailed Gemini setup guide
+│
+├── app.py                      # Main Flask application
+├── requirements.txt            # Python dependencies
+├── test_gemini_setup.py        # API setup verification
+├── .env                        # Environment variables
+├── README.md                   # Project documentation
+│
 ├── templates/
-│   └── index.html           # Main HTML template
+│   └── index.html             # Main HTML template
+│
 ├── static/
 │   ├── css/
-│   │   └── styles.css       # All styling
+│   │   └── styles.css         # Application styling
+│   │
 │   └── js/
-│       └── app.js           # Frontend JavaScript
-└── README.md                # This file
+│       └── app.js             # Frontend JavaScript logic
+│
+├── utils/                     # (Future) Utility modules
+│   ├── parser.py             # NLP parsing utilities
+│   ├── ranker.py             # Ranking algorithm
+│   └── cart.py               # Cart management
+│
+└── data/                      # (Future) Product data
+    ├── retailers.json         # Retailer information
+    └── products.json          # Product catalog
 ```
-
-## 🧮 Hybrid AI Architecture
-
-### Parsing: Gemini AI (Optional)
-```python
-def parse_brief_with_gemini(message):
-    """
-    AI-powered parsing using FREE Gemini API
-    - Understands natural language
-    - Extracts intent and context
-    - Handles variations and typos
-    - Falls back to regex on error
-    """
-```
-
-### Ranking: Pure Python (Always)
-```python
-def rank_products(product_list, spec):
-    """
-    Transparent scoring algorithm:
-    - Price fit: 40 points (cheaper within budget = better)
-    - Delivery speed: 30 points (meets deadline?)
-    - Quality rating: 25 points (customer reviews)
-    - Preference match: 25 bonus points (waterproof, warmth, brand)
-    
-    NO AI - Deterministic & Explainable
-    """
-```
-
-### Why This Hybrid Approach?
-
-| Component | Technology | Reason |
-|-----------|------------|--------|
-| **Parsing** | Gemini AI | Natural language understanding |
-| **Ranking** | Python | Transparent, explainable, deterministic |
-| **Fallback** | Regex | Works offline, 100% reliable |
-
-**Result**: Best UX (AI flexibility) + Best transparency (Python clarity)
-
-## 🎯 Example Rankings
-
-### Input:
-```
-"Skiing outfit, $400, size M, 5 days, warm and waterproof"
-```
-
-### Output:
-```
-Arc'teryx Rush Jacket: 91/100
-├── Price: $189 (21pts)     # (1 - 189/400) × 40
-├── Delivery: 3d (30pts)    # Meets 5-day deadline
-├── Rating: 4.8⭐ (24pts)    # 4.8 × 5
-├── Warmth: High (+15pts)   # Matches preference
-└── Waterproof (+10pts)     # Matches preference
-
-Patagonia Powder Bowl Jacket: 89/100
-├── Price: $179 (22pts)     # (1 - 179/400) × 40
-├── Delivery: 4d (22pts)    # Close to deadline
-├── Rating: 4.7⭐ (23pts)    # 4.7 × 5
-├── Warmth: High (+15pts)   # Matches preference
-└── Waterproof (+10pts)     # Matches preference
-```
-
-## 🔧 Python Classes & Functions
-
-### `ShoppingAgent` Class
-
-#### Parsing Methods:
-- `parse_brief(message)` - Main parsing (AI or regex)
-- `parse_brief_with_gemini(message)` - AI-powered parsing
-- `parse_brief_with_regex(message)` - Pattern-based parsing
-
-#### Product Discovery:
-- `discover_products(spec)` - Search across retailers
-- `rank_products(products, spec)` - Transparent scoring algorithm
-- `get_auto_selected_cart()` - Auto-select top products
-
-#### Analysis:
-- `calculate_total(cart)` - Calculate cart total
-- `get_budget_breakdown(cart, spec)` - Budget analysis
-- `get_delivery_timeline(cart)` - Delivery estimates
-- `optimize_cart_for_retailers(cart)` - Retailer distribution
-
-#### Checkout:
-- `simulate_checkout(cart)` - Generate checkout steps
-
-### Flask Routes
-- `GET /` - Serve main page
-- `POST /api/parse-brief` - Parse shopping request (AI or regex)
-- `POST /api/discover-products` - Find and rank products
-- `POST /api/checkout` - Simulate checkout
-- `GET /api/retailers` - Get retailer data
-- `GET /api/health` - Health check (shows AI status)
-
-## 🎨 Features Showcase
-
-### 1. AI-Powered Conversational Shopping
-```python
-# User input (natural language):
-"I need warm skiing gear, about 400 bucks, I'm a medium, deliver fast"
-
-# Gemini AI parses to:
-{
-    'budget': 400,
-    'delivery_days': 2,        # "fast" → 2 days
-    'size': 'M',               # "medium" → M
-    'preferences': {
-        'warmth': 'high',      # "warm" detected
-        'waterproof': True     # skiing context
-    },
-    'items': ['jacket', 'pants', 'gloves', 'goggles', 'helmet'],
-    'scenario': 'skiing'
-}
-```
-
-### 2. Multi-Retailer Search
-- 4 retailers: Amazon, REI, Backcountry, Evo
-- 20 products total (5 categories × 4 options)
-- Each with realistic pricing and delivery estimates
-
-### 3. Transparent Ranking
-- Python-based scoring (not AI black box)
-- Clear point breakdown for each product
-- Explainable recommendations
-- Users see exactly why products are ranked
-
-### 4. Budget Tracking
-```json
-{
-    "total": 526,
-    "budget": 400,
-    "remaining": -126,
-    "percentage_used": 131.5,
-    "over_budget": true,
-    "by_category": {
-        "jacket": 189,
-        "pants": 149,
-        "gloves": 69,
-        "goggles": 89,
-        "helmet": 99
-    }
-}
-```
-
-### 5. Delivery Timeline
-```json
-{
-    "by_item": {
-        "jacket": {
-            "days": 3,
-            "date": "February 11, 2026",
-            "retailer": "REI"
-        }
-    },
-    "latest_delivery_days": 4,
-    "latest_delivery_date": "February 12, 2026",
-    "meets_deadline": true
-}
-```
-
-### 6. Checkout Orchestration
-- Simulated multi-retailer checkout
-- Step-by-step progress
-- Animated status updates
-
-## 💰 Cost Comparison
-
-### Your Project (Gemini):
-- **API Calls**: $0/month (FREE!)
-- **Rate Limit**: 60 requests/min
-- **Daily Quota**: 1500 requests/day
-- **Hosting**: ~$5/month
-- **Total**: **$5/month**
-
-### Alternative (Anthropic Claude):
-- **API Calls**: $15-50/month
-- **Rate Limit**: Varies by tier
-- **Hosting**: ~$5/month
-- **Total**: **$20-55/month**
-
-### Regex Only:
-- **API Calls**: $0/month
-- **Hosting**: ~$5/month
-- **Total**: **$5/month**
-
-**Winner**: Gemini = Same cost as regex, better UX! 🎉
-
-## 🚀 Advanced Features
-
-### 1. Dual Parsing Modes
-- **AI Mode**: Natural language understanding
-- **Regex Mode**: Structured input parsing
-- **Auto Fallback**: AI fails → Regex activates
-
-### 2. Enhanced Budget Analysis
-- Real-time budget tracking
-- Percentage used indicator
-- Over-budget warnings
-- Category-wise breakdown
-
-### 3. Delivery Optimization
-- Expected delivery date per item
-- Latest delivery calculation
-- Deadline compliance check
-- Retailer consolidation suggestions
-
-### 4. Retailer Analytics
-- Number of retailers used
-- Items per retailer
-- Shipping cost estimates
-- Consolidation opportunities
-
-## 📊 Data Flow
-
-```
-User Input (Natural Language)
-    ↓
-Gemini AI / Regex Parser
-    ↓
-Structured Specification (JSON)
-    ↓
-Flask Backend (app.py)
-    ↓
-ShoppingAgent.discover_products()
-    ↓
-ShoppingAgent.rank_products()  ← Pure Python Algorithm
-    ↓
-Enhanced Analysis (Budget, Delivery, Retailers)
-    ↓
-JSON Response
-    ↓
-JavaScript Frontend (app.js)
-    ↓
-Dynamic UI Update
-```
-
-## 🛠️ Troubleshooting
-
-### Gemini API Issues
-
-**Error: "API key not valid"**
-```bash
-# Check your .env file:
-GEMINI_API_KEY=AIzaSy...  # Must start with AIzaSy
-
-# Get new key: https://aistudio.google.com/app/apikey
-```
-
-**Error: "Resource exhausted"**
-```bash
-# You hit rate limit (60/min)
-# Solution 1: Wait a minute
-# Solution 2: Set USE_AI_PARSING=false in .env
-```
-
-**Gemini returns invalid JSON**
-```python
-# App handles this automatically:
-# 1. Cleans markdown code blocks
-# 2. Falls back to regex parsing
-# No action needed!
-```
-
-### General Issues
-
-**Error: `ModuleNotFoundError: No module named 'flask'`**
-```bash
-pip install -r requirements.txt
-```
-
-**Error: Port 5000 already in use**
-```bash
-# Change port in app.py
-app.run(debug=True, host='0.0.0.0', port=8000)
-```
-
-**Error: `venv/Scripts/activate` not found**
-```bash
-# On Windows:
-venv\Scripts\activate.bat
-
-# On Git Bash (Windows):
-source venv/Scripts/activate
-```
-
-**App works but no AI parsing**
-```bash
-# Check .env file exists and has:
-GEMINI_API_KEY=your-key
-USE_AI_PARSING=true
-
-# Test with:
-python test_gemini_setup.py
-```
-
-## 🎓 Hackathon Submission Checklist
-
-✅ Python-based backend (Flask)
-✅ FREE AI integration (Gemini)
-✅ Transparent ranking algorithm (Python class)
-✅ Multi-retailer integration (4 stores)
-✅ Combined cart functionality
-✅ Budget tracking & analysis
-✅ Delivery timeline calculation
-✅ Simulated checkout orchestration
-✅ Dual parsing modes (AI + Regex)
-✅ Smart fallback system
-✅ Clean, documented code
-✅ Professional UI/UX
-✅ Easy to run and demo
-✅ Test script included
-✅ Comprehensive documentation
-
-## 📝 Code Quality
-
-- **Type hints**: Clear function signatures
-- **Docstrings**: All classes and methods documented
-- **Comments**: Explain complex logic
-- **Error handling**: Try-catch blocks everywhere
-- **Modular design**: Separate concerns (parsing, ranking, analysis)
-- **Fallback systems**: Graceful degradation
-- **Testing**: Verification script included
-
-## 🌟 Why This Architecture?
-
-### 1. Gemini for Parsing
-✅ Natural language understanding
-✅ FREE to use
-✅ Fast (flash-lite model)
-✅ Flexible input handling
-
-### 2. Python for Ranking
-✅ Transparent algorithm
-✅ Explainable decisions
-✅ Deterministic results
-✅ No API dependency
-
-### 3. Regex Fallback
-✅ Works offline
-✅ Zero latency
-✅ 100% reliable
-✅ No costs ever
-
-### 4. Best of All Worlds!
-🎯 AI flexibility + Python transparency + Regex reliability = **Perfect Solution**
-
-## 📈 Future Enhancements
-
-### Free Additions:
-- [ ] Web scraping with BeautifulSoup
-- [ ] SQLite for user preferences
-- [ ] Redis for caching
-- [ ] Selenium for real product data
-
-### Paid Options:
-- [ ] Real retailer API integrations (e.g., Amazon Product API)
-- [ ] Advanced ML for personalized recommendations
-- [ ] User authentication and order history
-- [ ] PostgreSQL database
-- [ ] Celery for async task processing
-- [ ] Payment gateway integration (Stripe)
-- [ ] Email notifications (SendGrid)
-
-## 🎯 Demo Script
-
-### Opening (30 seconds)
-**"Most AI shopping projects cost $30-50/month in API fees. Ours is 100% FREE using Google's Gemini API. No credit card needed, ever."**
-
-### Show Natural Language (1 minute)
-1. Type: "I need warm skiing gear, about 400 bucks, I'm a medium, deliver fast"
-2. Show AI parsing result
-3. Highlight: "No rigid format - just natural language"
-
-### Show Transparency (1 minute)
-1. Display product rankings
-2. Point to score breakdown: "91/100 = 21+30+24+15+10"
-3. Emphasize: "Pure Python algorithm - not AI black box"
-
-### Show Dual Mode (30 seconds)
-1. Switch to regex mode
-2. Type: "Skiing outfit, $400, size M, 5 days"
-3. Show it works offline too
-
-### Closing (30 seconds)
-**"Production-ready hybrid AI: Gemini for UX, Python for transparency, Regex for reliability. Free to run, scales infinitely, perfect for real-world deployment."**
-
-## 🏆 Competitive Advantages
-
-| Feature | Your Project | Typical AI Projects |
-|---------|--------------|---------------------|
-| **API Cost** | **$0/month** ✅ | $20-100/month |
-| **Parsing** | AI + Regex dual mode ✅ | Just AI or just regex |
-| **Ranking** | Transparent Python ✅ | Black box AI |
-| **Offline Mode** | Works via regex ✅ | API-dependent |
-| **Reliability** | Auto-fallback ✅ | Single point of failure |
-| **Scalability** | Unlimited free tier ✅ | API rate limits |
-| **Transparency** | Full visibility ✅ | Hidden algorithms |
-| **Setup** | 5 minutes ✅ | Complex config |
-
-## 📄 License
-
-MIT License - Free to use and modify
-
-## 👥 Team
-
-- **Developer**: [Your Name]
-- **Event**: Hack-Nation Global AI Hackathon
-- **Track**: VC Track
-- **Challenge**: Agentic Commerce
-
-## 🙏 Acknowledgments
-
-- Google for FREE Gemini API
-- Flask team for amazing web framework
-- Python community for excellent tools
-- Hack-Nation for the opportunity
-
-## 📚 Additional Resources
-
-- **Gemini API Docs**: https://ai.google.dev/docs
-- **Get FREE API Key**: https://aistudio.google.com/app/apikey
-- **Flask Documentation**: https://flask.palletsprojects.com/
-- **Detailed Setup Guide**: See `SETUP_GEMINI.md`
 
 ---
 
-**Built with ❤️ and 🐍 for Hack-Nation Global AI Hackathon**
+## 🔌 API Endpoints
 
-**🎉 100% FREE to run. No API costs. Just smart Python! 🎉**
+### 1. Parse Shopping Brief
 
-For questions or issues, check the code comments or run the test script!
+**Endpoint:** `POST /api/parse-brief`
 
-```bash
-python test_gemini_setup.py
+**Request Body:**
+```json
+{
+  "user_input": "I need skiing gear, budget $500, medium size, fast delivery"
+}
 ```
+
+**Response:**
+```json
+{
+  "success": true,
+  "specification": {
+    "budget": 500,
+    "delivery_urgency": "fast",
+    "size": "medium",
+    "preferences": ["warm", "waterproof"],
+    "required_items": ["jacket", "pants", "gloves"]
+  }
+}
+```
+
+### 2. Discover Products
+
+**Endpoint:** `POST /api/discover-products`
+
+**Request Body:**
+```json
+{
+  "specification": {
+    "budget": 500,
+    "required_items": ["jacket", "pants"]
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "Arc'teryx Rush Jacket",
+      "price": 380,
+      "rating": 4.8,
+      "retailer": "REI",
+      "delivery_days": 2,
+      "score": 97,
+      "score_breakdown": {
+        "price_fit": 38,
+        "delivery": 30,
+        "rating": 24,
+        "preferences": 20
+      }
+    }
+  ]
+}
+```
+
+### 3. Checkout
+
+**Endpoint:** `POST /api/checkout`
+
+**Request Body:**
+```json
+{
+  "cart": {
+    "items": [
+      {"product_id": "prod_001", "quantity": 1},
+      {"product_id": "prod_002", "quantity": 1}
+    ]
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "order_id": "ORD-2026-001",
+  "total": 520,
+  "retailers": ["REI", "Amazon"],
+  "estimated_delivery": "Feb 12, 2026"
+}
+```
+
+### 4. Health Check
+
+**Endpoint:** `GET /api/health`
+
+**Response:**
+```json
+{
+  "status": "healthy",
+  "timestamp": "2026-02-08T10:30:00Z",
+  "version": "1.0.0"
+}
+```
+
+---
+
+## 🔑 Key Features
+
+### 1. Explainable AI
+
+**Transparency Principles:**
+- Every decision has a clear justification
+- Score breakdowns visible to users
+- No black-box recommendations
+- Audit trail for all rankings
+
+### 2. Graceful Degradation
+
+**Fallback Mechanisms:**
+```
+AI Parsing Failed
+    ↓
+Deterministic Parser
+    ↓
+Default Values
+    ↓
+User Prompt for Clarification
+```
+
+### 3. Modular Architecture
+
+**Benefits:**
+- Easy to add new retailers
+- Simple to extend ranking criteria
+- Clean separation of concerns
+- Testable components
+
+### 4. User-Centric Design
+
+**Features:**
+- Clean, intuitive interface
+- Real-time feedback
+- Budget tracking
+- Progress indicators
+
+### 5. Production-Ready Code
+
+**Quality Measures:**
+- Error handling
+- Input validation
+- Logging
+- Documentation
+- Type hints (future)
+
+---
+
+## 🚀 Future Enhancements
+
+### Phase 1: Core Improvements
+
+**1. Real Retailer Integration**
+- Actual API connections to Amazon, REI, etc.
+- Live product data
+- Real-time inventory
+- Actual pricing
+
+**2. User Authentication**
+- Secure login system
+- User profiles
+- Order history
+- Saved preferences
+
+**3. Persistent Storage**
+- Database integration (PostgreSQL/MongoDB)
+- Cart persistence
+- Order tracking
+- User preferences storage
+
+### Phase 2: Advanced Features
+
+**4. Personalization Engine**
+```python
+def personalize_rankings(user_history, products):
+    """
+    Machine learning model to learn:
+    - User brand preferences
+    - Price sensitivity
+    - Style preferences
+    - Purchase patterns
+    """
+```
+
+**5. Async Orchestration**
+- Parallel retailer queries
+- Faster response times
+- WebSocket for real-time updates
+- Background task processing
+
+**6. Advanced Analytics**
+- User behavior tracking
+- Conversion optimization
+- A/B testing framework
+- Performance monitoring
+
+### Phase 3: Enterprise Features
+
+**7. Payment Integration**
+- Stripe/PayPal integration
+- Secure payment processing
+- Multi-currency support
+- Refund handling
+
+**8. Advanced Search**
+- Image-based search
+- Voice input
+- Semantic search
+- Filter combinations
+
+**9. Social Features**
+- Wishlists
+- Product sharing
+- Reviews and ratings
+- Social recommendations
+
+### Phase 4: Scaling
+
+**10. Infrastructure**
+- Docker containerization
+- Kubernetes orchestration
+- Load balancing
+- CDN integration
+
+**11. Monitoring**
+- Application performance monitoring
+- Error tracking (Sentry)
+- User analytics
+- Business metrics dashboard
+
+---
+
+## 👥 Team Information
+
+### Project Details
+
+| Field | Value |
+|-------|-------|
+| **Developer** | [Your Name] |
+| **Event** | Hack-Nation Global AI Hackathon |
+| **Track** | VC Track |
+| **Challenge** | Agentic Commerce |
+| **Technology** | Python + Flask + Google Gemini |
+
+### Contact
+
+- **GitHub:** [Your GitHub Profile]
+- **Email:** [Your Email]
+- **LinkedIn:** [Your LinkedIn]
+
+---
+
+## 📄 License
+
+```
+MIT License
+
+Copyright (c) 2026 [Your Name]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 🙏 Acknowledgments
+
+### Technologies Used
+
+- **Google Gemini AI** - Natural language understanding
+- **Flask** - Web framework
+- **Python** - Core language
+
+### Inspiration
+
+This project demonstrates how AI can be used responsibly in e-commerce by:
+- Maintaining transparency
+- Providing explainable decisions
+- Combining AI with deterministic logic
+- Prioritizing user trust
+
+---
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. **Documentation**: Read this README carefully
+2. **Issues**: Create GitHub issues for bugs or feature requests
+3. **Email**: Contact at [Your email]
+4. **Demo**: Watch the video demo: [Link]
+
+---
+
+**Built with Python 🐍 and thoughtful AI engineering for real-world agentic commerce.**
+
+**Happy Shopping! 🛒**

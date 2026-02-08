@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Commerce - AI Shopping Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container" id="app">
+        <div class="header">
+            <h1>Agentic Commerce</h1>
+            <p>AI-Powered Multi-Retailer Shopping</p>
+            <div class="tech-badge">🐍 Powered by Python + Flask</div>
+        </div>
+
+        <!-- Stage Indicator -->
+        <div class="stage-indicator">
+            <div class="stage active" id="stage-brief">1. Brief</div>
+            <div class="stage" id="stage-discovery">2. Discovery</div>
+            <div class="stage" id="stage-ranking">3. Ranking</div>
+            <div class="stage" id="stage-cart">4. Cart</div>
+            <div class="stage" id="stage-checkout">5. Checkout</div>
+        </div>
+
+        <!-- Quick Start Buttons -->
+        <div class="quick-start" id="quick-start">
+            <div class="quick-start-btn" onclick="quickStart('skiing')">
+                <strong>🎿 Skiing Outfit</strong>
+                <span>Complete gear, $400, 5 days</span>
+            </div>
+            <div class="quick-start-btn" onclick="quickStart('football')">
+                <strong>🏈 Game Day Outfit</strong>
+                <span>Full outfit, $150, by Friday</span>
+            </div>
+            <div class="quick-start-btn" onclick="quickStart('hackathon')">
+                <strong>💻 Hackathon Kit</strong>
+                <span>60 people, best value</span>
+            </div>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <div class="message agent">
+                    <div class="message-content">
+                        Hey! I'm your AI shopping agent. Tell me what you need, and I'll handle everything - finding products, comparing prices, and even checking out for you. What are you shopping for?
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    placeholder="Describe what you need..."
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div id="products-section" style="display: none;"></div>
+
+        <!-- Cart Section -->
+        <div id="cart-section" style="display: none;"></div>
+
+        <!-- Checkout Section -->
+        <div id="checkout-section" style="display: none;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
