@@ -1,4 +1,4 @@
-# Agentic Commerce 🛒
+# ShopUnify 🛒
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-2.3+-green?logo=flask)
@@ -15,7 +15,7 @@ An end-to-end AI-powered shopping agent built with Python + Flask that automates
 
 ## 🎯 Overview
 
-**Agentic Commerce** demonstrates how an autonomous AI agent can understand shopping intent, discover products across retailers, rank options transparently, and orchestrate a unified checkout flow.
+**ShopUnify** demonstrates how an autonomous AI agent can understand shopping intent, discover products across retailers, rank options transparently, and orchestrate a unified checkout flow.
 
 ### Core Capabilities
 
@@ -336,6 +336,7 @@ Gemini AI → Regex Parser → Default Values → User Clarification
 | **Event** | Hack-Nation Global AI Hackathon |
 | **Track** | VC Track |
 | **Challenge** | Agentic Commerce |
+| **Project** | ShopUnify |
 
 **Links:**
 - 🔗 **GitHub:** [Saadumar26](https://github.com/Saadumar26)
@@ -372,6 +373,6 @@ This project demonstrates responsible AI use in e-commerce by maintaining transp
 
 ---
 
-**Built with Python 🐍 + thoughtful AI engineering for real-world agentic commerce.**
+**Built with Python 🐍 + thoughtful AI engineering for real-world unified shopping.**
 
 **Happy Shopping! 🛒**
