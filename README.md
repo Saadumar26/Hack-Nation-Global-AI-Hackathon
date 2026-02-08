@@ -1,6 +1,13 @@
 # Agentic Commerce - Python Edition 🛒
 
-**Hack-Nation Global AI Hackathon Submission**
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-2.3+-green?logo=flask)
+![Google AI](https://img.shields.io/badge/Google_AI-Gemini-orange?logo=google)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Hackathon](https://img.shields.io/badge/Hackathon-Hack--Nation_Global-red)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+**Hack-Nation Global AI Hackathon Submission | VC Track**
 
 ---
 
@@ -24,21 +31,21 @@
 
 ## 🎯 Overview
 
-**Agentic Commerce** ek end-to-end AI-powered shopping agent hai jo **Python + Flask** ke saath build kiya gaya hai. Yeh system multiple retailers across products ko automatically discover aur purchase karne ka kaam karta hai.
+**Agentic Commerce** is an end-to-end AI-powered shopping agent built with **Python + Flask** that automates the process of finding and purchasing products across multiple retailers.
 
 ### Core Capabilities
 
-Yeh AI agent automatically:
+This AI agent automatically:
 
-- Natural language se shopping intent ko samajhta hai
-- Multiple retailers se products discover karta hai
-- Transparent aur explainable logic se options ko rank karta hai
-- Items ko single cart mein combine karta hai
-- Unified checkout flow orchestrate karta hai
+- Understands shopping intent from natural language
+- Discovers products across multiple retailers
+- Ranks options using transparent, explainable logic
+- Combines items into a single cart
+- Orchestrates a unified checkout flow
 
 ### Design Philosophy
 
-System ko **reliable, explainable, aur production-oriented** banaya gaya hai, jo AI flexibility ko deterministic backend logic ke saath combine karta hai.
+The system is designed to be **reliable, explainable, and production-oriented**, combining AI flexibility with deterministic backend logic.
 
 ---
 
@@ -145,7 +152,7 @@ System ko **reliable, explainable, aur production-oriented** banaya gaya hai, jo
 
 ### Prerequisites
 
-Aapke system par Python 3.8 ya usse upar ka version installed hona chahiye:
+You must have Python 3.8 or higher installed on your system:
 
 ```bash
 python --version
@@ -215,7 +222,7 @@ User apni needs natural language mein describe karta hai:
 
 ### Step 2: Structured Specification
 
-System automatically extract karta hai:
+The system automatically extracts:
 
 | Field | Description | Example |
 |-------|-------------|---------|
@@ -240,7 +247,7 @@ System automatically extract karta hai:
 
 **Ranking Criteria:**
 
-Each product ko **pure Python algorithm** ke through score diya jata hai:
+Each product is scored using a **pure Python algorithm**:
 
 ```python
 Total Score = (Price Score × 0.40) + 
@@ -822,12 +829,12 @@ This project demonstrates how AI can be used responsibly in e-commerce by:
 
 ## 📞 Support
 
-Agar aapko koi problem aa rahi hai ya aapke questions hain:
+If you encounter any issues or have questions:
 
-1. **Documentation**: Is README ko carefully padhein
-2. **Issues**: GitHub issues create karein
-3. **Email**: [Your email] par contact karein
-4. **Demo**: Video demo dekhen: [Link]
+1. **Documentation**: Read this README carefully
+2. **Issues**: Create GitHub issues for bugs or feature requests
+3. **Email**: Contact at [Your email]
+4. **Demo**: Watch the video demo: [Link]
 
 ---
 
