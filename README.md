@@ -4,64 +4,76 @@
 
 An end-to-end AI-powered shopping agent built with **Python + Flask** that automates the process of finding and buying products across multiple retailers.
 
-## 🎉 NEW: FREE Gemini AI Integration!
+---
 
-**100% FREE to run** - Uses Google's Gemini API (no credit card required!)
-- ✅ Natural language parsing with AI
-- ✅ Smart fallback to regex
-- ✅ Zero API costs
-- ✅ Works offline too!
+## 🎯 Challenge Overview
+
+Agentic Commerce demonstrates how an autonomous AI agent can:
+
+- Understand shopping intent from natural language  
+- Discover products across multiple retailers  
+- Rank options using transparent, explainable logic  
+- Combine items into a single cart  
+- Orchestrate a unified checkout flow  
+
+The system is designed to be **reliable, explainable, and production-oriented**, combining AI flexibility with deterministic backend logic.
+
+---
 
 ## 🎯 Challenge Requirements Met
 
-✅ **Conversational Brief & Constraints Capture**
-- Natural language input for shopping requirements (AI-powered!)
-- Structured JSON output with budget, delivery, preferences
-- Quick-start scenarios for common use cases
-- **Dual parsing modes: Gemini AI + Regex fallback**
+### ✅ Conversational Brief & Constraints Capture
+- Natural language input for shopping requirements  
+- Structured JSON output (budget, delivery, size, preferences)  
+- Quick-start scenarios for common use cases  
+- Dual parsing pipeline (AI-assisted + deterministic fallback)  
 
-✅ **Multi-Retailer Discovery (4 retailers)**
-- Amazon, REI, Backcountry, Evo integration
-- Realistic product data with prices, ratings, delivery times
-- Multiple product categories (jacket, pants, gloves, goggles, helmet)
+### ✅ Multi-Retailer Discovery
+- Amazon, REI, Backcountry, Evo  
+- Realistic product data (price, rating, delivery time)  
+- Multiple product categories (jacket, pants, gloves, goggles, helmet)  
 
-✅ **Transparent Ranking Engine (Python Algorithm)**
-- Score-based ranking (NOT just LLM output)
-- Weighted scoring: Price (40%), Delivery (30%), Quality (25%), Preferences (bonus)
-- Full explanation for each product's rank
-- **Implemented as Python class with clear logic**
-- **AI for parsing, Python for ranking = Best of both worlds**
+### ✅ Transparent Ranking Engine (Python)
+- Score-based ranking (not LLM output)  
+- Weighted criteria:
+  - Price fit (40%)  
+  - Delivery speed (30%)  
+  - Quality rating (25%)  
+  - Preference match (bonus)  
+- Full score breakdown per product  
 
-✅ **Single Combined Cart View**
-- Products from multiple retailers in one place
-- Total cost calculation
-- Budget tracking with percentage used
-- Delivery timeline for each item
-- Easy product swapping and optimization
+### ✅ Unified Cart Experience
+- Products from multiple retailers in one cart  
+- Budget usage tracking  
+- Category-wise cost breakdown  
+- Delivery timeline aggregation  
 
-✅ **Checkout Orchestration (Simulated)**
-- Safe demo mode (no real purchases)
-- Single payment & shipping entry
-- Multi-retailer order processing simulation
-- Real-time status updates
+### ✅ Checkout Orchestration (Simulated)
+- Unified checkout flow  
+- Multi-retailer order simulation  
+- Step-by-step status updates  
+
+---
 
 ## 🏗️ Tech Stack
 
 ### Backend
 - **Python 3.8+**
-- **Flask** - Web framework
-- **python-dotenv** - Environment variables
-- **google-generativeai** - FREE Gemini API (optional but recommended!)
+- **Flask** – Web framework  
+- **python-dotenv** – Environment management  
+- **google-generativeai** – AI-assisted parsing  
 
 ### Frontend
-- **Vanilla JavaScript** - No framework dependencies
-- **Custom CSS** - Modern, responsive design
-- **HTML5** - Semantic markup
+- **Vanilla JavaScript**
+- **HTML5 + CSS3**
+- Responsive, clean UI  
 
-### AI Integration
-- **Gemini 2.0 Flash Lite** - Fastest free model for parsing
-- **Regex Fallback** - Works without API
-- **Dual Mode** - Best reliability
+### Architecture Highlights
+- AI-assisted intent understanding  
+- Deterministic Python-based ranking  
+- Graceful fallback mechanisms  
+
+---
 
 ## 📦 Installation & Setup
 
