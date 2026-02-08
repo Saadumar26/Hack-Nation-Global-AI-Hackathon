@@ -531,10 +531,34 @@ def health_check():
 
 if __name__ == '__main__':
     print("🚀 Agentic Commerce Server Starting...")
-    print("📱 Visit: http://localhost:5000")
+    
+    # Get port from environment (Render provides this)
+    port = int(os.environ.get('PORT', 5000))
+    
+    # Check if running in production
+    is_production = os.environ.get('RENDER')
+    
+    if is_production:
+        print(f"📱 Running in PRODUCTION on port {port}")
+        debug_mode = False
+    else:
+        print(f"📱 Visit: http://localhost:{port}")
+        debug_mode = True
+    
     print("🛍️  Ready for AI-powered shopping!")
+    
     if agent.use_ai:
         print("🤖 Gemini AI Parsing: ENABLED (Free!)")
     else:
         print("📝 Regex Parsing: ENABLED (No API needed)")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    
+    app.run(debug=debug_mode, host='0.0.0.0', port=port)
+```
+
+---
+
+### 3. **Create 2 new files** in your project folder
+
+**File 1: `Procfile`** (no extension, exactly this name)
+```
+web: gunicorn app:app
