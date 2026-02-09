@@ -19,11 +19,11 @@ An end-to-end AI-powered shopping agent built with Python + Flask that automates
 
 ### Core Capabilities
 
-- ✅ Understands shopping intent from natural language
-- ✅ Discovers products across multiple retailers (Amazon, REI, Backcountry, Evo)
-- ✅ Ranks options using transparent, explainable Python algorithms
-- ✅ Combines items into a single unified cart
-- ✅ Orchestrates multi-retailer checkout flow
+- Understands shopping intent from natural language
+- Discovers products across multiple retailers (Amazon, REI, Backcountry, Evo)
+- Ranks options using transparent, explainable Python algorithms
+- Combines items into a single unified cart
+- Orchestrates multi-retailer checkout flow
 
 ### Design Philosophy
 
@@ -159,28 +159,28 @@ Total Score    = 112/115 = 97%  → Rank #1
 
 ## ✅ Challenge Requirements Met
 
-### 1. Conversational Brief & Constraints Capture ✅
+### 1. Conversational Brief & Constraints Capture 
 - Natural language parsing via Google Gemini
 - Structured JSON output
 - Fallback to regex-based parsing
 - Quick-start scenarios
 
-### 2. Multi-Retailer Discovery ✅
+### 2. Multi-Retailer Discovery 
 - 4 retailers (Amazon, REI, Backcountry, Evo)
 - 5 product categories
 - Realistic pricing and ratings
 
-### 3. Transparent Ranking Engine ✅
+### 3. Transparent Ranking Engine 
 - **Pure Python algorithm** (not LLM-generated)
 - Full score breakdown shown to users
 - Weighted criteria with clear justification
 
-### 4. Unified Cart Experience ✅
+### 4. Unified Cart Experience 
 - Single cart for multiple retailers
 - Budget usage tracking
 - Category-wise breakdown
 
-### 5. Checkout Orchestration ✅
+### 5. Checkout Orchestration 
 - Multi-retailer order simulation
 - Step-by-step status updates
 
